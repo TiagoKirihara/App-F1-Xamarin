@@ -18,8 +18,8 @@ namespace F1.View
             InitializeComponent();
             BindingContext = driver;
 
-            LabelTeam.Text = driver.Team;
-            LabelCountry.Text = driver.Country;
+            //LabelTeam.Text = driver.Team;
+            //LabelCountry.Text = driver.Country;
         }
     }
 }
