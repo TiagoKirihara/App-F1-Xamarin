@@ -19,16 +19,6 @@ namespace F1.View
         {
             InitializeComponent();
             BindingContext = new DriversViewModel();
-
         }
-
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var driver = (Driver)e.Item;
-            var vm = new DriverDetailViewModel(driver);
-            Navigation.PushAsync(new DriverDetailView(vm));
-        }
-
-
     }
 }
