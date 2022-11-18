@@ -88,7 +88,12 @@
                 <Label Grid.Column="1" Grid.Row="4" Text="{Binding Driver.DateOfBirth, StringFormat='{0:dd MMM yyyy}'}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="5" Text="Country" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="5" Text="{Binding Driver.Country}" Style="{StaticResource TableValueLabel}" />
+                <Label Grid.Column="1" Grid.Row="5" Text="{Binding Driver.Country}" Style="{StaticResource TableValueLabel}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenBrowserCommand}">                        
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
 
             </Grid>
         </StackLayout>

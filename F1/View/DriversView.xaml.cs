@@ -15,18 +15,10 @@ namespace F1.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DriversView : ContentPage
     {
-        private readonly DriverRepository driverRepository;
-
-        public IList<Driver> ListaDrivers { get; set; }
         public DriversView()
         {
             InitializeComponent();
-            driverRepository = new DriverRepository();
-            ListaDrivers = driverRepository.FindAll();
-
-
-            BindingContext = this;
-            //ListViewDrivers.ItemsSource = listaDrivers;
+            BindingContext = new DriversViewModel();
 
         }
 

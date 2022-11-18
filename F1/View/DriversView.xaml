@@ -5,7 +5,7 @@
              x:Class="F1.View.DriversView"
              Title="Drivers">
 
-    <ListView ItemsSource="{Binding ListaDrivers}"
+    <ListView ItemsSource="{Binding Drivers}"
                       RowHeight="90" 
                       SeparatorVisibility="None" 
                       ItemTapped="ListView_ItemTapped">
