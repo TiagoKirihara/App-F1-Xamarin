@@ -1,4 +1,5 @@
 ﻿using F1.Model;
+using F1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +14,14 @@ namespace F1.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DriverDetailView : ContentPage
     {
-        public DriverDetailView(Driver driver)
+        public DriverDetailView(DriverDetailViewModel vm)
         {
             InitializeComponent();
-            BindingContext = driver;
+            BindingContext = vm;
 
             //LabelTeam.Text = driver.Team;
             //LabelCountry.Text = driver.Country;
         }
+        
     }
 }

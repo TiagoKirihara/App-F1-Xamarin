@@ -1,5 +1,6 @@
 ﻿using F1.Data;
 using F1.Model;
+using F1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,8 @@ namespace F1.View
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var driver = (Driver)e.Item;
-            Navigation.PushAsync(new DriverDetailView(driver));
+            var vm = new DriverDetailViewModel(driver);
+            Navigation.PushAsync(new DriverDetailView(vm));
         }
 
 

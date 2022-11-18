@@ -17,13 +17,13 @@
                 <Image Aspect="Fill" Margin="0,-1,0,-1" HeightRequest="20" Source="CurvedMask.png" VerticalOptions="End" />
 
                 <!--  profile image  -->
-                <controls:CircleImage Grid.Row="0" TranslationY="50" VerticalOptions="End" Source="{Binding Photo}" Style="{StaticResource DriverCircleImageProfile}"/>
+                <controls:CircleImage Grid.Row="0" TranslationY="50" VerticalOptions="End" Source="{Binding Driver.Photo}" Style="{StaticResource DriverCircleImageProfile}"/>
             </Grid>
 
             <!--  Profile Name  -->
             <StackLayout Margin="0,50,0,0" HorizontalOptions="Center">
-                <Label Style="{StaticResource ProfileNameLabel}" Text="{Binding Name}" />
-                <Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="{Binding Team}"/>
+                <Label Style="{StaticResource ProfileNameLabel}" Text="{Binding Driver.Name}" />
+                <Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="{Binding Driver.Team}"/>
             </StackLayout>
 
             <!--  Social Stats Section  -->
@@ -35,24 +35,24 @@
                 </Grid.ColumnDefinitions>
 
                 <StackLayout>
-                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding Podiums}" />
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding Driver.Podiums}" />
                     <Label Style="{StaticResource StatsCaptionLabel}" Text="Podiums" />
                 </StackLayout>
 
                 <StackLayout Grid.Column="1">
-                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding Points}" />
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding Driver.Points}" />
                     <Label Style="{StaticResource StatsCaptionLabel}" Text="Points" />
                 </StackLayout>
 
                 <StackLayout Grid.Column="2">
-                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding HighestRaceFinish}" />
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="{Binding Driver.HighestRaceFinish}" />
                     <Label Style="{StaticResource StatsCaptionLabel}" Text="Highest" />
                 </StackLayout>
             </Grid>
 
             <BoxView Margin="20,10" HeightRequest="1" BackgroundColor="{StaticResource SeperatorColor}"/>
 
-            <Label Margin="20,10" Style="{StaticResource MainBodyLabel}" Text="{Binding Bio}" HorizontalTextAlignment="Center" />
+            <Label Margin="20,10" Style="{StaticResource MainBodyLabel}" Text="{Binding Driver.Bio}" HorizontalTextAlignment="Center" />
             <!--<BoxView Margin="10" HeightRequest="1" BackgroundColor="{StaticResource SeperatorColor}" VerticalOptions="Center"/>-->
 
             <BoxView Margin="20,10" HeightRequest="1" BackgroundColor="{StaticResource SeperatorColor}"/>
@@ -73,22 +73,22 @@
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="0" Grid.Row="0" Text="Grands Prix entered" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="{Binding GrandPrixEnetered}" Style="{StaticResource TableValueLabel}"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Driver.GrandPrixEnetered}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="1" Text="World Championships" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="1" Text="{Binding WorldChampionships}" Style="{StaticResource TableValueLabel}"/>
+                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Driver.WorldChampionships}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="2" Text="Highest race finish" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="2" Text="{Binding HighestRaceFinish}" Style="{StaticResource TableValueLabel}"/>
+                <Label Grid.Column="1" Grid.Row="2" Text="{Binding Driver.HighestRaceFinish}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="3" Text="Highest grid position" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="3" Text="{Binding HighestGridPosition}" Style="{StaticResource TableValueLabel}"/>
+                <Label Grid.Column="1" Grid.Row="3" Text="{Binding Driver.HighestGridPosition}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="4" Text="Date of birth" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="4" Text="{Binding DateOfBirth, StringFormat='{0:dd MMM yyyy}'}" Style="{StaticResource TableValueLabel}"/>
+                <Label Grid.Column="1" Grid.Row="4" Text="{Binding Driver.DateOfBirth, StringFormat='{0:dd MMM yyyy}'}" Style="{StaticResource TableValueLabel}"/>
 
                 <Label Grid.Column="0" Grid.Row="5" Text="Country" Style="{StaticResource TableTextLabel}"/>
-                <Label Grid.Column="1" Grid.Row="5" Text="{Binding Country}" Style="{StaticResource TableValueLabel}" />
+                <Label Grid.Column="1" Grid.Row="5" Text="{Binding Driver.Country}" Style="{StaticResource TableValueLabel}" />
 
             </Grid>
         </StackLayout>
